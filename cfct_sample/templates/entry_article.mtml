@@ -1,0 +1,145 @@
+<$mt:Include module="_定数設定ファイル"$>
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<$mt:Include module="_head"$>
+<body>
+
+<div class="wrapper">
+
+<$mt:Include module="_ヘッダー"$>
+
+
+<main>
+
+  <div>
+    <h1><$mt:EntryTitle$></h1>
+    <div>
+      <$mt:EntryBody$>
+    </div>
+
+    <mt:If tag="cf_sample_text">
+      <dl>
+        <dt>カスタムフィールド：テキスト</dt>
+        <dd><mt:cf_sample_text></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_textarea">
+      <dl>
+        <dt>カスタムフィールド：テキスト（複数行）</dt>
+        <dd><mt:cf_sample_textarea></dd>
+        <dt>カスタムフィールド：テキスト（複数行）　<code>nl2br="1"</code>モディファイア付与</dt>
+        <dd><mt:cf_sample_textarea nl2br="1"></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_checkbox">
+      <dl>
+        <dt>カスタムフィールド：チェックボックス</dt>
+        <dd><mt:cf_sample_checkbox></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_url">
+      <dl>
+        <dt>カスタムフィールド：URL</dt>
+        <dd><mt:cf_sample_url></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_date">
+      <dl>
+        <dt>カスタムフィールド：日付と時刻</dt>
+        <dd><mt:cf_sample_date></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_day">
+      <dl>
+        <dt>カスタムフィールド：日付と時刻（日付のみ）</dt>
+        <dd><mt:cf_sample_day></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_time">
+      <dl>
+        <dt>カスタムフィールド：日付と時刻（時刻のみ）</dt>
+        <dd><mt:cf_sample_time></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_dropdown">
+      <dl>
+        <dt>カスタムフィールド：ドロップダウン（カスタムフィールドの値は保存値=表示値でセット）</dt>
+        <dd>保存値：<mt:cf_sample_dropdown></dd>
+        <dd>表示値：<mt:cf_sample_dropdown label="cf_sample_dropdown"></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_radio">
+      <dl>
+        <dt>カスタムフィールド：ラジオボタン（カスタムフィールドの値は保存値=表示値でセット）</dt>
+        <dd>保存値：<mt:cf_sample_radio></dd>
+        <dd>表示値：<mt:cf_sample_radio label="cf_sample_radio"></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_embed">
+      <dl>
+        <dt>カスタムフィールド：埋め込みオブジェクト</dt>
+        <dd><mt:cf_sample_embed></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_asset">
+      <dl>
+        <dt>カスタムフィールド：アセット</dt>
+        <dd>デフォルト出力：<mt:cf_sample_asset></dd>
+        <dd>URL出力：<mt:cf_sample_assetAsset><$mt:AssetURL$></mt:cf_sample_assetAsset></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_audio">
+      <dl>
+        <dt>カスタムフィールド：オーディオ</dt>
+        <dd>デフォルト出力：<mt:cf_sample_audio></dd>
+        <dd>URL出力：<mt:cf_sample_audioAsset><$mt:AssetURL$></mt:cf_sample_audioAsset></dd>
+      </dl>
+    </mt:If>
+
+    <mt:If tag="cf_sample_video">
+      <dl>
+        <dt>カスタムフィールド：ビデオ</dt>
+        <dd>デフォルト出力：<mt:cf_sample_video></dd>
+        <dd>URL出力：<mt:cf_sample_videoAsset><$mt:AssetURL$></mt:cf_sample_videoAsset></dd>
+      </dl>
+    </mt:If>
+    
+    <mt:If tag="cf_sample_image">
+      <dl>
+        <dt>カスタムフィールド：画像</dt>
+        <dd>デフォルト出力：<mt:cf_sample_image></dd>
+        <dd>URL出力：<mt:cf_sample_imageAsset><$mt:AssetURL$></mt:cf_sample_imageAsset></dd>
+      </dl>
+    </mt:If>
+
+    <ul>
+      <li><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></li>
+      <li><a href="<$mt:EntryPermalink$>"><time><$mt:EntryDate format="%Y-%m-%d"$></time></a></li>
+    </ul>
+      
+  </div>
+
+  <$mt:Include module="_サイドバー（記事）"$>
+
+</main>
+
+
+<$mt:Include module="_フッター"$>
+
+</div><!-- //.wrapper -->
+
+</body>
+</html>

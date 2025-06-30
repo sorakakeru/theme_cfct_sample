@@ -1,0 +1,36 @@
+<aside>
+  <mt:ArchiveList type="Category">
+    <mt:ArchiveListHeader>
+      <dl>
+        <dt>カテゴリ</dt>
+        <dd><ul>
+    </mt:ArchiveListHeader>
+          <li><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></li>
+    <mt:ArchiveListFooter>
+        </ul></dd>
+      </dl>
+    </mt:ArchiveListFooter>
+  </mt:ArchiveList>
+
+  <mt:ArchiveList type="Monthly">
+    <mt:ArchiveListHeader>
+      <dl>
+        <dt>月別アーカイブ</dt>
+        <dd><ul>
+    </mt:ArchiveListHeader>
+          <li><a href="<$mt:ArchiveLink$>"><$mt:ArchiveDate format="%Y年%b月"$></a></li>
+    <mt:ArchiveListFooter>
+        </ul></dd>
+      </dl>
+    </mt:ArchiveListFooter>
+  </mt:ArchiveList>
+
+  <div>
+    <form method="get" id="search" action="<$mt:CGIPath$><$mt:SearchScript$>">
+      <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>">
+      <input type="hidden" name="limit" value="<$mt:SearchMaxResults$>">
+      <input type="text" name="search" value="<$mt:SearchString$>">
+      <button type="submit" name="button">検索</button>
+    </form>
+  </div>
+</aside>

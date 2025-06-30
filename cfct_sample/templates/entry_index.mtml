@@ -1,0 +1,45 @@
+<$mt:Include module="_定数設定ファイル"$>
+<mt:SetVar name="indexTitle" value="記事一覧">
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<$mt:Include module="_head"$>
+<body>
+
+<div class="wrapper">
+
+<$mt:Include module="_ヘッダー"$>
+
+
+<main>
+
+  <div>
+    <mt:Entries lastn="10">
+      <mt:EntriesHeader>
+        <h2>記事一覧</h2>
+        <ul>
+      </mt:EntriesHeader>
+          <li>
+            <a href="<$mt:EntryPermalink$>">
+              <time><$mt:EntryDate format="%Y-%m-%d"$></time>
+              <$mt:EntryTitle$>
+            </a>
+          </li>
+      <mt:EntriesFooter>
+        </ul>
+      </mt:EntriesFooter>
+    </mt:Entries>
+  </div>
+
+  <$mt:Include module="_サイドバー（記事）"$>
+
+</main>
+
+
+<$mt:Include module="_フッター"$>
+
+</div><!-- //.wrapper -->
+
+</body>
+</html>

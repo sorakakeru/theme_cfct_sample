@@ -1,0 +1,44 @@
+<$mt:Include module="_定数設定ファイル"$>
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<$mt:Include module="_head"$>
+<body>
+
+<div class="wrapper">
+
+<$mt:Include module="_ヘッダー"$>
+
+
+<main>
+
+  <div>
+    <mt:Entries lastn="10">
+      <mt:EntriesHeader>
+        <h2><mt:IfArchiveType archive_type="Category"><$mt:CategoryLabel$></mt:IfArchiveType><mt:IfArchiveType archive_type="Monthly"><$mt:ArchiveDate format="%Y年%b月"$></mt:IfArchiveType>記事一覧</h2>
+        <ul>
+      </mt:EntriesHeader>
+          <li>
+            <a href="<$mt:EntryPermalink$>">
+              <time><$mt:EntryDate format="%Y-%m-%d"$></time>
+              <$mt:EntryTitle$>
+            </a>
+          </li>
+      <mt:EntriesFooter>
+        </ul>
+      </mt:EntriesFooter>
+    </mt:Entries>
+  </div>
+
+  <$mt:Include module="_サイドバー（記事）"$>
+
+</main>
+
+
+<$mt:Include module="_フッター"$>
+
+</div><!-- //.wrapper -->
+
+</body>
+</html>

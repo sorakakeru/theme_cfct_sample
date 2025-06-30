@@ -1,0 +1,248 @@
+<$mt:Include module="_定数設定ファイル"$>
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<$mt:Include module="_head"$>
+<body>
+
+<div class="wrapper">
+
+<$mt:Include module="_ヘッダー"$>
+
+
+<main>
+
+  <div>
+    <h1><mt:ContentField content_field="テキスト"><mt:ContentFieldValue></mt:ContentField></h1>
+    <div>
+
+      <mt:If tag="ContentField" content_field="コンテンツタイプ">
+        <dl>
+          <dt>フィールド：コンテンツタイプ</dt>
+          <mt:ContentField content_field="コンテンツタイプ">
+            <dd>データ識別タイプのみ：<mt:ContentFieldValue></dd>
+            <dd>
+              <mt:ContentField content_field="タイトル（フィールド用）"><mt:ContentFieldValue></mt:ContentField><br>
+              <mt:ContentField content_field="埋め込みテキスト（フィールド用）"><mt:ContentFieldValue></mt:ContentField>
+            </dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="テキスト">
+        <dl>
+          <dt>フィールド：テキスト</dt>
+          <mt:ContentField content_field="テキスト">
+            <dd><mt:ContentFieldValue></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="テキスト（複数行）">
+        <dl>
+          <dt>フィールド：テキスト（複数行）</dt>
+          <mt:ContentField content_field="テキスト（複数行）">
+            <dd><mt:ContentFieldValue></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="数値">
+        <dl>
+          <dt>フィールド：数値</dt>
+          <mt:ContentField content_field="数値">
+            <dd><mt:ContentFieldValue></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="URL">
+        <dl>
+          <dt>フィールド：URL</dt>
+          <mt:ContentField content_field="URL">
+            <dd><mt:ContentFieldValue></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="日付と時刻">
+        <dl>
+          <dt>フィールド：日付と時刻</dt>
+          <mt:ContentField content_field="日付と時刻">
+            <dd><mt:ContentFieldValue></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="日付">
+        <dl>
+          <dt>フィールド：日付</dt>
+          <mt:ContentField content_field="日付">
+            <dd><mt:ContentFieldValue></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="時刻">
+        <dl>
+          <dt>フィールド：時刻</dt>
+          <mt:ContentField content_field="時刻">
+            <dd><mt:ContentFieldValue></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="セレクトボックス">
+        <dl>
+          <dt>フィールド：セレクトボックス</dt>
+          <mt:ContentField content_field="セレクトボックス">
+            <dd>名前：<mt:Var name="__key__"></dd>
+            <dd>値：<mt:ContentFieldValue></dd>
+            <dd>値：<mt:Var name="__value__">（<code>MTVar name="__value__"</code>で出力）</dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="ラジオボタン">
+        <dl>
+          <dt>フィールド：ラジオボタン</dt>
+          <mt:ContentField content_field="ラジオボタン">
+            <dd>名前：<mt:Var name="__key__"></dd>
+            <dd>値：<mt:ContentFieldValue></dd>
+            <dd>値：<mt:Var name="__value__">（<code>MTVar name="__value__"</code>で出力）</dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="チェックボックス">
+        <dl>
+          <dt>フィールド：チェックボックス</dt>
+          <mt:ContentField content_field="チェックボックス">
+            <dd>名前：<mt:Var name="__key__"></dd>
+            <dd>値：<mt:ContentFieldValue></dd>
+            <dd>値：<mt:Var name="__value__">（<code>MTVar name="__value__"</code>で出力）</dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="アセット">
+        <dl>
+          <dt>フィールド：アセット</dt>
+          <mt:ContentField content_field="アセット">
+            <dd>デフォルト出力（ID）：<mt:ContentFieldValue></dd>
+            <dd>URL出力：<$mt:AssetURL$></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="オーディオアセット">
+        <dl>
+          <dt>フィールド：オーディオアセット</dt>
+          <mt:ContentField content_field="オーディオアセット">
+            <dd>デフォルト出力（ID）：<mt:ContentFieldValue></dd>
+            <dd>URL出力：<$mt:AssetURL$></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="ビデオアセット">
+        <dl>
+          <dt>フィールド：ビデオアセット</dt>
+          <mt:ContentField content_field="ビデオアセット">
+            <dd>デフォルト出力（ID）：<mt:ContentFieldValue></dd>
+            <dd>URL出力：<$mt:AssetURL$></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="画像アセット">
+        <dl>
+          <dt>フィールド（ID）：画像アセット</dt>
+          <mt:ContentField content_field="画像アセット">
+            <dd>デフォルト出力：<mt:ContentFieldValue></dd>
+            <dd>URL出力：<$mt:AssetURL$></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="埋め込みテキスト">
+        <dl>
+          <dt>フィールド：埋め込みテキスト</dt>
+          <mt:ContentField content_field="埋め込みテキスト">
+            <dd><mt:ContentFieldValue></dd>
+            <dt>フィールド：埋め込みテキスト　<code>nl2br="1"</code>モディファイア付与</dt>
+            <dd><mt:ContentFieldValue nl2br="1"></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="カテゴリ">
+        <dl>
+          <dt>フィールド：カテゴリ</dt>
+          <mt:ContentField content_field="カテゴリ">
+            <dd>デフォルト出力（ID）：<mt:ContentFieldValue></dd>
+            <dd>カテゴリ名出力：<$mt:CategoryLabel$></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="タグ">
+        <dl>
+          <dt>フィールド：タグ</dt>
+          <mt:ContentField content_field="タグ">
+            <dd>デフォルト出力（ID）：<mt:ContentFieldValue></dd>
+            <dd>タグ名出力：<$mt:TagName$></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="リスト">
+        <dl>
+          <dt>フィールド：リスト</dt>
+          <dd>
+            <ul>
+            <mt:ContentField content_field="リスト">
+              <li><mt:ContentFieldValue></li>
+            </mt:ContentField>
+            </ul>
+          </dd>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="テーブル">
+        <dl>
+          <dt>フィールド：テーブル</dt>
+          <mt:ContentField content_field="テーブル">
+            <dd><mt:ContentFieldValue></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+      <mt:If tag="ContentField" content_field="テキスト表示エリア">
+        <dl>
+          <dt>フィールド：テキスト表示エリア</dt>
+          <mt:ContentField content_field="テキスト表示エリア">
+            <dd><mt:ContentFieldValue></dd>
+          </mt:ContentField>
+        </dl>
+      </mt:If>
+
+    </div>
+
+    <ul>
+      <li><a href="<$mt:ContentPermalink$>"><time><$mt:ContentDate format="%Y-%m-%d"$></time></a></li>
+    </ul>
+  </div>
+
+  <$mt:Include module="_サイドバー（コンテンツタイプ）"$>
+
+</main>
+
+
+<$mt:Include module="_フッター"$>
+
+</div><!-- //.wrapper -->
+
+</body>
+</html>
