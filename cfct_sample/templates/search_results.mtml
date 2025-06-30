@@ -1,0 +1,113 @@
+<$mt:Include module="_定数設定ファイル"$>
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<$mt:Include module="_head"$>
+<body>
+
+<div class="wrapper">
+
+<$mt:Include module="_ヘッダー"$>
+
+
+<main>
+
+  <div>
+    <mt:SetVarTemplate id="search_results" name="search_results">
+      <mt:SearchResults>
+        <mt:SearchResultsHeader>
+          <mt:IfStatic><mt:IfStraightSearch><h1>「<$mt:SearchString$>」の検索結果 - <$mt:SearchResultCount$>件</h1></mt:IfStraightSearch></mt:IfStatic>
+          <mt:IfTagSearch><h1>タグ「<$mt:SearchString$>」がついている記事 - <$mt:SearchResultCount$>件</h1></mt:IfTagSearch>
+          <ul>
+        </mt:SearchResultsHeader>
+            <li>
+              <a href="<$mt:EntryPermalink$>">
+                <time><$mt:EntryDate format="%Y-%m-%d"$></time>
+                <$mt:EntryTitle$>
+              </a>
+            </li>
+        <mt:SearchResultsFooter>
+          </ul>
+          <nav>
+            <ul>
+          <mt:IfMoreResults>
+              <li><a href="<$mt:NextLink encode_html='1'$>" rel="prev" class="prev">« 前のページ</a></li>
+          </mt:IfMoreResults>
+          <mt:IfPreviousResults>
+              <li><a href="<$mt:PreviousLink encode_html='1'$>" rel="next" class="next">次のページ »</a></li>
+          </mt:IfPreviousResults>
+            </ul>
+          </nav>
+        </mt:SearchResultsFooter>
+      </mt:SearchResults>
+    </mt:SetVarTemplate>
+
+    <$mt:Var name="search_results"$>
+
+    <mt:NoSearchResults>
+      <mt:IfStatic><mt:IfStraightSearch><h1>「<$mt:SearchString$>」の検索結果</h1></mt:IfStraightSearch></mt:IfStatic>
+      <mt:IfTagSearch><h1>タグ「<$mt:SearchString$>」がついている記事</h1></mt:IfTagSearch>
+      <div>
+        <p>「<$mt:SearchString$>」と一致する結果は見つかりませんでした。</p>
+      </div>
+    </mt:NoSearchResults>
+
+    <mt:NoSearch>
+      <h1>検索について</h1>
+      <div>
+        <p>すべての単語が順序に関係なく検索されます。フレーズで検索したいときは引用符で囲んでください。</p>
+        <pre><code>"movable type"</code></pre>
+        <p>AND、OR、NOTを入れることで論理検索を行うこともできます。</p>
+        <pre><code>個人 OR 出版</code></pre>
+        <pre><code>個人 NOT 出版</code></pre>
+      </div>
+    </mt:NoSearch>
+  </div>
+  
+  <aside>
+    <mt:TopLevelCategories>
+      <mt:SubCatIsFirst>
+        <dl>
+          <dt>カテゴリ</dt>
+          <dd><ul>
+      </mt:SubCatIsFirst>
+            <li><a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel$></a></li>
+      <mt:SubCatIsLast>
+          </ul></dd>
+        </dl>
+      </mt:SubCatIsLast>
+    </mt:TopLevelCategories>
+
+    <mt:ArchiveList type="Monthly">
+      <mt:ArchiveListHeader>
+        <dl>
+          <dt>月別アーカイブ</dt>
+          <dd><ul>
+      </mt:ArchiveListHeader>
+            <li><a href="<$mt:ArchiveLink$>"><$mt:ArchiveDate format="%Y年"$></a></li>
+      <mt:ArchiveListFooter>
+          </ul></dd>
+        </dl>
+      </mt:ArchiveListFooter>
+    </mt:ArchiveList>
+
+    <div>
+      <form method="get" id="search" action="<$mt:CGIPath$><$mt:SearchScript$>">
+        <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>">
+        <input type="hidden" name="limit" value="<$mt:SearchMaxResults$>">
+        <input type="text" name="search" value="<$mt:SearchString$>">
+        <button type="submit" name="button">検索</button>
+      </form>
+    </div>
+  </aside>
+
+</main>
+
+
+<$mt:Include module="_フッター"$>
+
+</div><!-- //.wrapper -->
+
+</body>
+</html>

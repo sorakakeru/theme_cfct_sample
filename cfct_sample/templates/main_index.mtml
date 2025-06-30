@@ -1,0 +1,41 @@
+<$mt:Include module="_定数設定ファイル"$>
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<$mt:Include module="_head"$>
+<body>
+
+<div class="wrapper">
+
+<$mt:Include module="_ヘッダー"$>
+
+
+<main>
+
+  <div>
+    <ul>
+      <li><a href="<$mt:BlogURL$>entry_list.html">記事一覧</a></li>
+      <li><a href="<$mt:BlogURL$>contents_data/entry_list.html">コンテンツタイプ記事一覧</a></li>
+    </ul>
+
+    <mt:Pages>
+      <mt:PagesHeader>
+        <ul>
+      </mt:PagesHeader>
+          <li><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+      <mt:PagesFooter>
+        </ul>
+      </mt:PagesFooter>
+    </mt:Pages>
+  </div>
+
+</main>
+
+
+<$mt:Include module="_フッター"$>
+
+</div><!-- //.wrapper -->
+
+</body>
+</html>

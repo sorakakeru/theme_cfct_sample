@@ -1,0 +1,572 @@
+id: cfct-sample
+label: カスタムフィールド・コンテンツタイプ（コンテンツデータ）出力確認サンプルテーマ
+name: カスタムフィールド・コンテンツタイプ（コンテンツデータ）出力確認サンプルテーマ
+version: '1.0'
+author_link: https://sorakakeru.info/
+author_name: 宙駆ける
+class: both
+description: カスタムフィールドやコンテンツタイプ（コンテンツデータ）の出力確認サンプル用のテーマです。
+protected: 1
+thumbnail_file: 'thumb.png'
+thumbnail_file_medium: 'thumb-medium.png'
+thumbnail_file_small: 'thumb-small.png'
+elements: 
+  custom_fields: 
+    component: commercial
+    data: 
+      cf_sample_asset: 
+        default: ''
+        description: ''
+        name: アセット
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: cf_sample_asset
+        type: file
+      cf_sample_audio: 
+        default: ''
+        description: ''
+        name: オーディオ
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: cf_sample_audio
+        type: audio
+      cf_sample_checkbox: 
+        default: 0
+        description: ''
+        name: チェックボックス
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: cf_sample_checkbox
+        type: checkbox
+      cf_sample_date: 
+        default: ''
+        description: ''
+        name: 日付と時刻
+        obj_type: entry
+        options: datetime
+        required: 0
+        tag: cf_sample_date
+        type: datetime
+      cf_sample_day: 
+        default: ''
+        description: ''
+        name: 日付と時刻（日付のみ）
+        obj_type: entry
+        options: date
+        required: 0
+        tag: cf_sample_day
+        type: datetime
+      cf_sample_dropdown: 
+        default: 1
+        description: ''
+        name: ドロップダウン
+        obj_type: entry
+        options: 1=ドロップダウンA,2=ドロップダウンB,3=ドロップダウンC
+        required: 0
+        tag: cf_sample_dropdown
+        type: select
+      cf_sample_embed: 
+        default: ''
+        description: ''
+        name: 埋め込みオブジェクト
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: cf_sample_embed
+        type: embed
+      cf_sample_image: 
+        default: ''
+        description: ''
+        name: 画像
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: cf_sample_image
+        type: image
+      cf_sample_radio: 
+        default: ''
+        description: ''
+        name: ラジオボタン
+        obj_type: entry
+        options: 1=ラジオボタンA,2=ラジオボタンB,3=ラジオボタンC
+        required: 0
+        tag: cf_sample_radio
+        type: radio
+      cf_sample_text: 
+        default: ''
+        description: ''
+        name: テキスト
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: cf_sample_text
+        type: text
+      cf_sample_textarea: 
+        default: ''
+        description: ''
+        name: テキスト（複数行）
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: cf_sample_textarea
+        type: textarea
+      cf_sample_time: 
+        default: ''
+        description: ''
+        name: 日付と時刻（時刻のみ）
+        obj_type: entry
+        options: time
+        required: 0
+        tag: cf_sample_time
+        type: datetime
+      cf_sample_url: 
+        default: http://
+        description: ''
+        name: URL
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: cf_sample_url
+        type: url
+      cf_sample_video: 
+        default: ''
+        description: ''
+        name: ビデオ
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: cf_sample_video
+        type: video
+    importer: custom_fields
+  default_categories: 
+    component: ~
+    data: 
+      ":order": 
+        - catA
+        - catB
+        - catC
+      catA: 
+        label: カテゴリA
+      catB: 
+        label: カテゴリB
+      catC: 
+        label: カテゴリC
+    importer: default_categories
+  default_category_sets: 
+    component: ~
+    data: 
+      サンプルデータ: 
+        categories: 
+          ":order": 
+            - catA
+            - catB
+            - catC
+          catA: 
+            label: カテゴリA
+          catB: 
+            label: カテゴリB
+          catC: 
+            label: カテゴリC
+        name: サンプルデータ
+    importer: default_category_sets
+  default_content_types: 
+    component: ~
+    data: 
+      - 
+        description: ''
+        fields: 
+          - 
+            description: ''
+            display: default
+            label: コンテンツタイプ
+            max: ''
+            min: ''
+            multiple: 0
+            order: 1
+            required: 0
+            source: フィールド用コンテンツタイプ
+            type: content_type
+          - 
+            data_label: 1
+            description: ''
+            display: default
+            initial_value: ''
+            label: テキスト
+            max_length: 255
+            min_length: 0
+            order: 2
+            required: 1
+            type: single_line_text
+          - 
+            description: ''
+            display: default
+            full_rich_text: 1
+            initial_value: ''
+            input_format: richtext
+            label: テキスト（複数行）
+            order: 3
+            required: 0
+            type: multi_line_text
+          - 
+            decimal_places: 0
+            description: ''
+            display: default
+            initial_value: ''
+            label: 数値
+            max_value: '2147483647'
+            min_value: '-2147483648'
+            order: 4
+            required: 0
+            type: number
+          - 
+            description: ''
+            display: default
+            initial_value: ''
+            label: URL
+            order: 5
+            required: 0
+            type: url
+          - 
+            description: ''
+            display: default
+            initial_date: ''
+            initial_time: ''
+            initial_value: ~
+            label: 日付と時刻
+            order: 6
+            required: 0
+            type: date_and_time
+          - 
+            description: ''
+            display: default
+            initial_value: ''
+            label: 日付
+            order: 7
+            required: 0
+            type: date_only
+          - 
+            description: ''
+            display: default
+            initial_value: ''
+            label: 時刻
+            order: 8
+            required: 0
+            type: time_only
+          - 
+            description: ''
+            display: default
+            label: セレクトボックス
+            max: ''
+            min: ''
+            multiple: 0
+            order: 9
+            required: 0
+            type: select_box
+            values: 
+              - 
+                checked: ''
+                label: セレクトA
+                value: selectA
+              - 
+                checked: ''
+                label: セレクトB
+                value: selectB
+              - 
+                checked: ''
+                label: セレクトC
+                value: selectC
+          - 
+            description: ''
+            display: default
+            label: ラジオボタン
+            order: 10
+            required: 0
+            type: radio_button
+            values: 
+              - 
+                checked: ''
+                label: ラジオA
+                value: radioA
+              - 
+                checked: ''
+                label: ラジオB
+                value: radioB
+              - 
+                checked: ''
+                label: ラジオC
+                value: radioC
+          - 
+            description: ''
+            display: default
+            label: チェックボックス
+            max: 3
+            min: 0
+            multiple: 1
+            order: 11
+            required: 0
+            type: checkboxes
+            values: 
+              - 
+                checked: ''
+                label: チェックA
+                value: checkA
+              - 
+                checked: ''
+                label: チェックB
+                value: checkB
+              - 
+                checked: ''
+                label: チェックC
+                value: checkC
+          - 
+            allow_upload: 1
+            description: ''
+            display: default
+            label: アセット
+            max: ''
+            min: ''
+            multiple: 0
+            order: 12
+            required: 0
+            type: asset
+          - 
+            allow_upload: 1
+            description: ''
+            display: default
+            label: オーディオアセット
+            max: ''
+            min: ''
+            multiple: 0
+            order: 13
+            required: 0
+            type: asset_audio
+          - 
+            allow_upload: 1
+            description: ''
+            display: default
+            label: ビデオアセット
+            max: ''
+            min: ''
+            multiple: 0
+            order: 14
+            required: 0
+            type: asset_video
+          - 
+            allow_upload: 1
+            description: ''
+            display: default
+            label: 画像アセット
+            max: ''
+            min: ''
+            multiple: 0
+            order: 15
+            preview_height: 80
+            preview_width: 80
+            required: 0
+            type: asset_image
+          - 
+            description: ''
+            display: default
+            initial_value: ''
+            label: 埋め込みテキスト
+            order: 16
+            required: 0
+            type: embedded_text
+          - 
+            can_add: 0
+            category_set: サンプルデータ
+            description: ''
+            display: default
+            label: カテゴリ
+            max: ''
+            min: ''
+            multiple: 0
+            order: 17
+            required: 0
+            type: categories
+          - 
+            can_add: 1
+            description: ''
+            display: default
+            initial_value: ''
+            label: タグ
+            max: 2
+            min: 0
+            multiple: 0
+            order: 18
+            required: 0
+            type: tags
+          - 
+            description: ''
+            display: default
+            label: リスト
+            order: 19
+            required: 0
+            type: list
+          - 
+            description: ''
+            display: default
+            increase_decrease_cols: 1
+            increase_decrease_rows: 1
+            initial_cols: 2
+            initial_rows: 2
+            label: テーブル
+            order: 20
+            required: 0
+            type: tables
+          - 
+            description: ''
+            display: default
+            label: テキスト表示エリア
+            order: 21
+            required: 0
+            text: "【テキスト表示エリア】\nこのフィールドは投稿・編集画面でのみ表示されます。\nテンプレートには出力されません。"
+            type: text_label
+        name: サンプルデータ
+        user_disp_option: 1
+      - 
+        description: ''
+        fields: 
+          - 
+            data_label: 1
+            description: ''
+            display: default
+            initial_value: ''
+            label: タイトル（フィールド用）
+            max_length: 255
+            min_length: 0
+            order: 1
+            required: 1
+            type: single_line_text
+          - 
+            description: ''
+            display: default
+            initial_value: ''
+            label: 埋め込みテキスト（フィールド用）
+            order: 2
+            required: 0
+            type: embedded_text
+        name: フィールド用コンテンツタイプ
+        user_disp_option: 1
+    importer: default_content_types
+  default_folders: 
+    component: ~
+    data: 
+      ":order": 
+        - folderA
+        - folderB
+      folderA: 
+        label: フォルダA
+      folderB: 
+        label: フォルダB
+    importer: default_folders
+  template_set: 
+    component: ~
+    data: 
+      base_path: templates
+      label: exported_template set
+      templates: 
+        archive: 
+          entry_list_archive: 
+            label: 記事リストアーカイブ
+            mappings: 
+              category: 
+                archive_type: Category
+                file_template: category/%c.html
+                preferred: 1
+              monthly: 
+                archive_type: Monthly
+                file_template: archive/%y%m.html
+                preferred: 1
+        ct: 
+          contents_data_article: 
+            content_type: サンプルデータ
+            label: コンテンツタイプアーカイブ
+            mappings: 
+              contenttype: 
+                archive_type: ContentType
+                category_field: カテゴリ
+                file_template: contents_data/%y%m_%E.html
+                preferred: 1
+        ct_archive: 
+          contents_data_list_archive: 
+            content_type: サンプルデータ
+            label: コンテンツタイプリストアーカイブ
+            mappings: 
+              contenttype-category: 
+                archive_type: ContentType-Category
+                category_field: カテゴリ
+                file_template: contents_data/category/%c.html
+                preferred: 1
+              contenttype-monthly: 
+                archive_type: ContentType-Monthly
+                category_field: カテゴリ
+                file_template: contents_data/archive/%y%m.html
+                preferred: 1
+        index: 
+          contents_data_index: 
+            label: コンテンツタイプ記事一覧
+            outfile: contents_data/entry_list.html
+            rebuild_me: 1
+          entry_index: 
+            label: 記事一覧
+            outfile: entry_list.html
+            rebuild_me: 1
+          main_index: 
+            label: index.html
+            outfile: index.html
+            rebuild_me: 1
+          styles: 
+            label: style.css
+            outfile: css/style.css
+            rebuild_me: 1
+        individual: 
+          entry_article: 
+            label: 記事アーカイブ
+            mappings: 
+              individual: 
+                archive_type: Individual
+                file_template: article/%y%m_%E.html
+                preferred: 1
+        module: 
+          template_conf: 
+            label: _定数設定ファイル
+          template_footer: 
+            label: _フッター
+          template_head: 
+            label: _head
+          template_headTitle: 
+            label: _headタイトル部分
+          template_header: 
+            label: _ヘッダー
+          template_sidebarContenttype: 
+            label: _サイドバー（コンテンツタイプ）
+          template_sidebarEntry: 
+            label: _サイドバー（記事）
+        page: 
+          page_article: 
+            label: ウェブページアーカイブ
+            mappings: 
+              page: 
+                archive_type: Page
+                file_template: "%c/%f"
+                preferred: 1
+        system: 
+          cd_search_results: 
+            label: コンテンツの検索結果
+          comment_listing: 
+            label: コメント一覧
+          comment_preview: 
+            label: コメントプレビュー
+          comment_response: 
+            label: コメント完了
+          dynamic_error: 
+            label: ダイナミックパブリッシングエラー
+          popup_image: 
+            label: ポップアップ画像
+          search_results: 
+            label: 検索結果
+    importer: template_set

@@ -1,0 +1,46 @@
+<mt:Ignore><!--------------------------------
+// テンプレートの予約変数セット
+// <mt:If name="template_type_custom" eq="***">〜</mt:If>の形で使える
+--------------------------------></mt:Ignore>
+<mt:SetVars>
+	<mt:If name="main_index">
+		template_type_custom=main_index
+	<mt:ElseIf name="datebased_archive">
+		template_type_custom=datebased_archive
+	<mt:ElseIf name="category_archive">
+		template_type_custom=category_archive
+	<mt:ElseIf name="entry_archive">
+		template_type_custom=entry_archive
+	<mt:ElseIf name="page_archive">
+		template_type_custom=page_archive
+	<mt:ElseIf name="entry_index">
+		template_type_custom=entry_index
+	<mt:ElseIf name="contents_data_index">
+		template_type_custom=contents_data_index
+	<mt:ElseIf name="contenttype_archive">
+		template_type_custom=contenttype_archive
+	<mt:ElseIf name="contenttype_archive_listing">
+		template_type_custom=contenttype_archive_listing
+	<mt:ElseIf name="search_results">
+		template_type_custom=search_results
+	</mt:If>
+</mt:SetVars>
+
+<mt:Ignore><!--------------------------------
+// ブログなどIDの定数セット
+// ** : ブログやカテゴリなどの名前（Basename推奨）
+// [num] : ID（数値）
+--------------------------------></mt:Ignore>
+<mt:SetVars>
+  websiteID=[num]
+
+  catID_a=[num]
+  catID_b=[num]
+  catID_c=[num]
+  folderID_a=[num]
+  folderID_b=[num]
+
+  contentID_sample=[num]
+
+  contentCatID_sample=[num]
+</mt:SetVars>
